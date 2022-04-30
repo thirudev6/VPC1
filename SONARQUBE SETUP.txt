@@ -1,0 +1,23 @@
+         sonarqube
+Server with minimum 2GB/1 vcpu capacity
+OpenJDK 11 or JRE 11
+All sonarquber process should run as a non-root sonar user.
+SONARQUBE  SETUP STEPS
+sudo yum update -y
+step1
+sudo yum install java-11-openjdk-devel -y
+step2:
+cd /opt 
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.6.zip
+step3
+sudo unzip sonarqube-7.6.zip
+sudo mv sonarqube-7.6 sonarqube
+step4
+sudo useradd sonar
+sudo chown -R sonar:sonar /opt/sonarqube
+STEP5
+login to sonor server
+sudo su - sonar
+cd /opt/sonarqube/bin/linux-x86-64 
+./sonar.sh start
+ ./sonar.sh status

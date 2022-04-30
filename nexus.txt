@@ -1,0 +1,19 @@
+                                 NEXUS
+PREREQISTS:
+Minimum 1 VCPU & 2 GB Memory
+Server firewall opened for port 22 & 8081
+OpenJDK 8
+All Nexus processes should run as a non-root nexus user.
+STEP1: INSTALL OPEN JDK
+sudo yum install java-1.8.0-openjdk.x86_64 -y
+STEP2: cd /opt
+STEP3: sudo wget -O nexus.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+STEP4: sudo tar -xvf nexus.tar.gz
+STEP5: sudo mv nexus-3* nexus
+STEP6: sudo adduser nexus
+sudo chown -R nexus:nexus /app/nexus
+sudo chown -R nexus:nexus /app/sonatype-work
+STEP7 : sudo vi  /opt/nexus/bin/nexus.rc
+                run_as_user="nexus"
+sudo chkconfig nexus on
+sudo systemctl start nexus

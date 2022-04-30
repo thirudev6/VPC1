@@ -1,0 +1,42 @@
+ANSIBLE SETUP
+  sudo -i
+amazon-linux-extras instll ansible2 -y
+yum install git python python-pip python-level openssl -y
+vi /etc/ansible/hosts
+[group name]
+private ip
+vi /etc/ansible/ansible.cfg
+uncomment
+inventory and root
+useradd ansible
+passwd ansible
+visudo
+ ansible all=all nopasswd:
+vi /etc/ssh/sshd_config
+password authentication yes ivvali
+--------- ----- ---- ----
+nodes
+useradd
+passwd
+visudo
+vim /etc/ssh/sshd_config
+--- ---- -- -- -- --- --- 
+all servers
+systemctl restart sshd
+systemctl status sshd
+
+
+login as ansible in all servers by using 
+su - ansible
+--- ---- -- -- - - - - - - -- -- - - - 
+ansible server in 
+
+ssh-keygen
+ssh-copy-id ansible@private ip node1
+ssh ansible@private ip 
+
+
+
+
+
+

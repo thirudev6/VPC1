@@ -1,0 +1,6 @@
+yum install java-1.8.0-openjdk -y
+cd /opt
+wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.tar.gz
+tar -xvzf apa+tab
+mv apa+tab tomcat
+cd tomcat
