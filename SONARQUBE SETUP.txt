@@ -1,6 +1,7 @@
          sonarqube
 Server with minimum 2GB/1 vcpu capacity
 OpenJDK 11 or JRE 11
+port 9000
 All sonarquber process should run as a non-root sonar user.
 SONARQUBE  SETUP STEPS
 sudo yum update -y
