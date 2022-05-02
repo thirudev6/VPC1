@@ -1,6 +1,6 @@
 wget https://releases.hashicorp.com/terraform/1.1.3/terraform_1.1.3_linux_amd64.zip
 unzip terraform
-mv terraform /usr/local/bin
+mv terraform /usr/local/bin(ubuntu) in linux mv terraform /usr/bin
 terraform version
 cd ~
 mkdir terraform && vim main.tf
