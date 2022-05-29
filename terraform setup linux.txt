@@ -1,0 +1,11 @@
+ 1  yum update -y
+    2  cd /opt
+    3  mkdir terraform
+    4  cd terraform/
+    5  ll
+    6  wget https://releases.hashicorp.com/terraform/1.2.1/terraform_1.2.1_linux_amd64.zip
+    7  unzip terraform_1.2.1_linux_amd64.zip
+    8  cd
+    9  mv /opt/terraform/terraform /usr/bin/
+   10  ll
+   11  terraform -version
